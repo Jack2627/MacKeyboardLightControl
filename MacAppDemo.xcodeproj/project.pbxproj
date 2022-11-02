@@ -3,23 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C56494D290EC95A001C66AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C56494C290EC95A001C66AC /* AppDelegate.swift */; };
-		5C56494F290EC95A001C66AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C56494E290EC95A001C66AC /* ViewController.swift */; };
 		5C564951290EC95B001C66AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C564950290EC95B001C66AC /* Assets.xcassets */; };
-		5C564954290EC95B001C66AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C564952290EC95B001C66AC /* Main.storyboard */; };
+		5C56495D290ECCB9001C66AC /* KeyboardBrightnessApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C56495C290ECCB9001C66AC /* KeyboardBrightnessApplication.swift */; };
+		5C56495F290ECCE9001C66AC /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C56495E290ECCE9001C66AC /* Key.swift */; };
+		5C564961290ED0FB001C66AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C564960290ED0FB001C66AC /* Main.storyboard */; };
+		5C564963290ED36B001C66AC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C564962290ED36B001C66AC /* main.swift */; };
+		5C564966290ED3BB001C66AC /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C564965290ED3BB001C66AC /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C564949290EC95A001C66AC /* MacAppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacAppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C56494C290EC95A001C66AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C56494E290EC95A001C66AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C564950290EC95B001C66AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5C564953290EC95B001C66AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C564955290EC95B001C66AC /* MacAppDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacAppDemo.entitlements; sourceTree = "<group>"; };
+		5C56495B290ECB89001C66AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5C56495C290ECCB9001C66AC /* KeyboardBrightnessApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBrightnessApplication.swift; sourceTree = "<group>"; };
+		5C56495E290ECCE9001C66AC /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		5C564960290ED0FB001C66AC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5C564962290ED36B001C66AC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5C564965290ED3BB001C66AC /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C564966290ED3BB001C66AC /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +44,7 @@
 			children = (
 				5C56494B290EC95A001C66AC /* MacAppDemo */,
 				5C56494A290EC95A001C66AC /* Products */,
+				5C564964290ED3BA001C66AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,13 +59,23 @@
 		5C56494B290EC95A001C66AC /* MacAppDemo */ = {
 			isa = PBXGroup;
 			children = (
-				5C56494C290EC95A001C66AC /* AppDelegate.swift */,
-				5C56494E290EC95A001C66AC /* ViewController.swift */,
+				5C56495B290ECB89001C66AC /* Info.plist */,
+				5C56495C290ECCB9001C66AC /* KeyboardBrightnessApplication.swift */,
+				5C56495E290ECCE9001C66AC /* Key.swift */,
+				5C564962290ED36B001C66AC /* main.swift */,
 				5C564950290EC95B001C66AC /* Assets.xcassets */,
-				5C564952290EC95B001C66AC /* Main.storyboard */,
 				5C564955290EC95B001C66AC /* MacAppDemo.entitlements */,
+				5C564960290ED0FB001C66AC /* Main.storyboard */,
 			);
 			path = MacAppDemo;
+			sourceTree = "<group>";
+		};
+		5C564964290ED3BA001C66AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C564965290ED3BB001C66AC /* IOKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,7 +114,7 @@
 				};
 			};
 			buildConfigurationList = 5C564944290EC95A001C66AC /* Build configuration list for PBXProject "MacAppDemo" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -120,7 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C564951290EC95B001C66AC /* Assets.xcassets in Resources */,
-				5C564954290EC95B001C66AC /* Main.storyboard in Resources */,
+				5C564961290ED0FB001C66AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,23 +148,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C56494F290EC95A001C66AC /* ViewController.swift in Sources */,
-				5C56494D290EC95A001C66AC /* AppDelegate.swift in Sources */,
+				5C56495F290ECCE9001C66AC /* Key.swift in Sources */,
+				5C56495D290ECCB9001C66AC /* KeyboardBrightnessApplication.swift in Sources */,
+				5C564963290ED36B001C66AC /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		5C564952290EC95B001C66AC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5C564953290EC95B001C66AC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5C564956290EC95B001C66AC /* Debug */ = {
@@ -269,13 +276,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacAppDemo/MacAppDemo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XBXZZGL9Z7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacAppDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Keyboard Brightness";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
-				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSPrincipalClass = KeyboardBrightnessApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -294,13 +308,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacAppDemo/MacAppDemo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XBXZZGL9Z7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacAppDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Keyboard Brightness";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
-				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSPrincipalClass = KeyboardBrightnessApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
